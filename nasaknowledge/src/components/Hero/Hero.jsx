@@ -1,4 +1,5 @@
 import React from 'react';
+import './Hero.css';
 import { useState, useEffect } from 'react';
 
 export default function Hero() {
@@ -31,13 +32,15 @@ export default function Hero() {
 
     return (        
         <section className="hero">
-            <h1>IMAGE OF THE DAY</h1>
-            <p>Each day a different image of our universe will be featured along with a brief explanation from NASA</p>
-            <h2>{media.title}</h2>
-            <h3>{media.date}</h3>
+            <div className="hero-text">
+                <h1>IMAGE OF THE DAY</h1>
+                <p>Each day a different image of our universe will be featured along with a brief explanation from NASA</p>
+                <h2>{media.title}</h2>
+                <h3>{media.date}</h3>
+            </div>
 
             <div className="image-container">
-                <img width="600" height="600" src={media.url} alt="" />
+                <img width="600" height="600" src={media.url} alt="nasa image" />
                 <h3>By: {media.copyright}</h3>
                 <p>{media.explanation}</p>
             </div>
